@@ -66,7 +66,7 @@ namespace Gamepad {
         Left, //P13
         //% block="right"
         //% block.loc.nl="rechts"
-        Button4 //P14
+        Right //P14
     }
 
     export let BUTTONMAX = 4
@@ -142,7 +142,7 @@ namespace Gamepad {
             case Button.Up: PRESSED1 = true; if (pressed1Handler) pressed1Handler(); break;
             case Button.Down: PRESSED2 = true; if (pressed2Handler) pressed2Handler(); break;
             case Button.Left: PRESSED3 = true; if (pressed3Handler) pressed3Handler(); break;
-            case Button.Button4: PRESSED4 = true; if (pressed4Handler) pressed4Handler(); break;
+            case Button.Right: PRESSED4 = true; if (pressed4Handler) pressed4Handler(); break;
         }
     }
 
@@ -151,7 +151,7 @@ namespace Gamepad {
             case Button.Up: PRESSED1 = false; if (released1Handler) released1Handler(); break;
             case Button.Down: PRESSED2 = false; if (released2Handler) released2Handler(); break;
             case Button.Left: PRESSED3 = false; if (released3Handler) released3Handler(); break;
-            case Button.Button4: PRESSED4 = false; if (released4Handler) released4Handler(); break;
+            case Button.Right: PRESSED4 = false; if (released4Handler) released4Handler(); break;
         }
     }
 
@@ -174,7 +174,7 @@ namespace Gamepad {
             case Button.Up: return !PRESSED1;
             case Button.Down: return !PRESSED2;
             case Button.Left: return !PRESSED3;
-            case Button.Button4: return !PRESSED4;
+            case Button.Right: return !PRESSED4;
         }
         return false;
     }
@@ -187,7 +187,7 @@ namespace Gamepad {
             case Button.Up: return PRESSED1;
             case Button.Down: return PRESSED2;
             case Button.Left: return PRESSED3;
-            case Button.Button4: return PRESSED4;
+            case Button.Right: return PRESSED4;
         }
         return false;
     }
@@ -213,7 +213,7 @@ namespace Gamepad {
             case Button.Up: released1Handler = code; break;
             case Button.Down: released2Handler = code; break;
             case Button.Left: released3Handler = code; break;
-            case Button.Button4: released4Handler = code; break;
+            case Button.Right: released4Handler = code; break;
         }
     }
 
@@ -224,7 +224,7 @@ namespace Gamepad {
             case Button.Up: pressed1Handler = code; break;
             case Button.Down: pressed2Handler = code; break;
             case Button.Left: pressed3Handler = code; break;
-            case Button.Button4: pressed4Handler = code; break;
+            case Button.Right: pressed4Handler = code; break;
         }
     }
 
