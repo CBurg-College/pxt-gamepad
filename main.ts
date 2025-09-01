@@ -166,16 +166,6 @@ namespace Gamepad {
         }
     })
 
-    //% block="join %group"
-    //% block.loc.nl="sluit aan bij %group"
-    //$ group.min = 1 group.max=9
-    export function setGroup(group: number) {
-        if (group > 9) group = 9
-        if (group < 1) group = 1
-        GROUP = group
-        radio.setGroup(GROUP)
-    }
-
     //% subcategory="Testen"
     //% block="%button is up"
     //% block.loc.nl="%button is losgelaten"
