@@ -195,7 +195,7 @@ namespace Gamepad {
     //% subcategory="Testen"
     //% block="joystick-power"
     //% block.loc.nl="joystick-kracht"
-    export function value(): number {
+    export function power(): number {
         return JSPOWER
     }
 
@@ -218,7 +218,7 @@ namespace Gamepad {
     }
 
     //% block="when %button is pressed"
-    //% block.loc.nl="wanneer op %button wordt gedrukt"
+    //% block.loc.nl="wanneer %button wordt ingedrukt"
     export function onPressed(button: Button, code: () => void): void {
         switch (button) {
             case Button.Up: pressed1Handler = code; break;
